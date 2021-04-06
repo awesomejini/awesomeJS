@@ -1,0 +1,19 @@
+
+.grey {
+    background: black;
+    height: 2000px;
+    margin-top: 400px;
+    margin-bottom: 1600px;
+}
+
+.sticky {
+    position: sticky;
+    top: 100px;
+    float: right;
+}
+
+.left-text {
+    float: left;
+    color: white;
+    padding: 20px;
+}

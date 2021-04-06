@@ -1,0 +1,58 @@
+button {
+    padding: 5px 10px;
+    height: 30px;
+    line-height: 170%;
+    text-align: center;
+    border: 0;
+    border-radius: 7px;
+    font-weight: 500;
+}
+button:focus {
+    border: 0;
+    outline: 0;
+}
+
+.red-btn {
+    background: #ededed;
+    color: #f06872;
+}
+
+.purple-btn {
+    background: #ededed;
+    color: #8a68fd;
+}
+
+.wrap {
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+.alert-box1 {
+    background: #f06872;
+    color: white;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+
+.alert-box2 {
+    background: #8a68fd;
+    color: white;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+#open-btn {
+    display: block;
+}
+
+#alert1 {
+    display: none;
+}
+
+#alert2 {
+    display: none;
+}
+
+

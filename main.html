@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div style="padding-top:20px;">
+   
+    <div class="wrap">
+       
+        <h1>JavaScript</h1>
+        <br>
+        <!--    Alert 박스    -->
+        <h2>Alert 박스</h2>
+        <hr>
+
+        <div class="alert-box1" id="alert1">
+            <p>Alert 박스</p>
+            <button onclick="알림창열고닫기('none', 'block')" class="red-btn"> 닫기</button>
+        </div>
+        <button onclick="알림창열고닫기('block', 'none')" class="red-btn" id="open-btn"> 열기</button>
+
+        <br>
+        
+        
+        <!--    Alert 박스2    -->
+        <h2>Alert 박스2</h2>
+        <hr>
+
+        <button onclick="입력하셈창('아이디를','block')" class="purple-btn">아이디 입력</button>
+        <button onclick="입력하셈창('비번을','block')" class="purple-btn">비밀번호 입력</button>
+        
+        <br><br>
+        <div class="alert-box2" id="alert2">
+            <p>Alert 박스2</p>
+            
+        </div>
+        <br>
+        <!--    addEventListener    -->
+        <h2>addEventListener</h2>
+        <hr>
+
+        <button id="ael-test-btn-click">이벤트리스너 실행(click)</button>
+        <button id="ael-test-btn-mouseover">이벤트리스너 실행(mouseover)</button>
+   
+    </div> 
+</div>
+   
+    <script>
+        
+        //      Alert 박스
+        var 알림창1 = document.getElementById('alert1');
+        var 열기버튼 = document.getElementById('open-btn');
+    
+        function 알림창열고닫기(구멍1, 구멍2){
+            알림창1.style.display = 구멍1;
+            if (구멍1 == 'none'){
+                열기버튼.style.display = 구멍2;
+            } else {
+                열기버튼.style.display = 'none';
+            }
+            
+        }
+        
+        //      Alert 박스2
+        var 알림창2 = document.getElementById('alert2');
+        
+        function 입력하셈창(구멍1, 구멍2){
+            알림창2.innerHTML = `${구멍1} 입력안하셨어요`
+            알림창2.style.display = 구멍2;
+        }
+        
+        //      addEventListener
+        document.querySelector('#ael-test-btn-click').addEventListener('click', function(){
+            window.alert("'addEventListener(click)' 이 실행되었습니다.");
+        })
+        document.querySelector('#ael-test-btn-mouseover').addEventListener('mouseover', function(){
+            window.alert("'addEventListener(mouseover)' 가 실행되었습니다.");
+        })
+        
+        
+    </script>
+    
+</body>
+</html>

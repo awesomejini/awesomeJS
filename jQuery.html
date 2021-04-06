@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="jQuery.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div style="padding-top:20px;">
+   
+    <div class="wrap">
+       
+        <h1>jQuery</h1>
+        <br>
+        
+        <!--    jQuery    -->
+        <h2>jQuery</h2>
+        <hr>
+        <h4 id="test" class="test1">안녕하세요</h4>
+        <h4 id="test" class="test1">안녕하세요</h4>
+        <h4 id="test" class="test1">안녕하세요</h4>
+        
+        <br>
+        <!--    jQuery2    -->
+        <h2>jQuery2</h2>
+        <hr>
+        <p class="greeting">안녕하세요</p>
+        <p class="greeting">안녕하세요</p>
+        <p class="greeting">안녕하세요</p>
+        
+        <button class="btn">slideToggle 버튼</button>
+        <button class="btn">버튼btn</button>
+        <button class="btn">버튼btn</button>
+        
+        
+        
+        
+        
+    </div>
+</div>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+//        $('#test').html(); // 안녕하세요 그대로 남음
+//        $('#test').css('color', 'red');
+//        $('#test').attr('src', 'aaa.jpg');
+        
+//        jQuery
+        $('.test1').eq(0).addClass('yellow-bg');
+        
+        
+        
+        
+//        jQuery2
+//        $('.btn').on('click', 'h4', function(){ //h4가 있으면 클릭
+//            
+//        });
+        
+        $('.btn').eq(0).on('click', function(){
+//            $('.greeting').hide();
+            $('.greeting').slideToggle();
+        });
+        
+        $('.btn').eq(1).on('click', function(){
+            $('.greeting').slideToggle();
+        });
+        
+        $('.btn').eq(1).on('click', function(){
+            $('.greeting').slideToggle();
+        });
+        
+        
+    </script>
+    
+    
+</body>
+</html>
