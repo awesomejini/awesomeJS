@@ -1,0 +1,42 @@
+<script>
+    //    Map
+
+    var person = new Map();
+    //    var person = new Array();
+    person.set([1, 2, 3], 'kim');
+    person.set('age', 20);
+    console.log(person);
+
+    console.log(person.get('age'));
+    person.delete('age');
+    console.log(person);
+    console.log('person.size : ' + person.size);
+
+    for (var key of person) {
+        console.log(key);
+    };
+
+    var person = new Map([
+        ['name', 'kim'],
+        ['age', 20]
+    ]);
+
+    for (var key of person.keys()) {
+        console.log(key)
+    }
+
+    //    Set
+
+    var 출석부 = new Set(['a', 'b', 'c', 'b']);
+
+    console.log(출석부);
+    console.log(출석부.add('s'));
+    출석부.delete('s')
+    console.log(출석부);
+    console.log('s를 가지고 있니? : ' + 출석부.has('s'));
+
+    출석부 = [...출석부];
+
+    console.log(출석부);
+
+</script>

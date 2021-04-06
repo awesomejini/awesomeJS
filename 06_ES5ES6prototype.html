@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //        Object.create(프로토타입obj) // 상속기능 ES5문법
+
+        // var parent = {
+        // name: 'kim',
+        // age: 50
+        // };
+        //
+        // var child = Object.create(parent);
+        // child.age = 20;
+        //
+        // var grandchild = Object.create(child);
+
+
+        //        class // ES6문법
+
+        class 부모 {
+            constructor(test) {
+                this.name = test;
+                //                this.sayHi = function() {
+                // console.log('hello')
+                // }
+            }
+            sayHi() {
+                console.log('hi')
+            }
+            sayHello() {
+                console.log('hello')
+            }
+        }
+
+        var 자식 = new 부모('test');
+        console.log(자식.__proto__);
+        console.log(Object.getPrototypeOf(자식)); // 정확
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<script>
+    var 심볼 = Symbol('설명');
+
+    var weight = Symbol('내 시크릿 몸무게');
+
+    var person = {
+        name: 'kim'
+    };
+
+    person.weight = 100;
+    person[weight] = 200; // enumerable X
+
+    console.log(person);
+
+    var height = Symbol('내 키임');
+
+    var person = {
+        name: 'kim',
+        [height]: 100
+    };
+
+    for (var key in person) {
+        console.log(person[key]);
+    }
+
+    var a = Symbol.for('설명1');
+    var b = Symbol.for('설명1'); // ==> var b = a
+
+</script>

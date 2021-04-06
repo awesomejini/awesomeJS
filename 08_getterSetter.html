@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //        var person = {
+        // name: 'Park',
+        // age: 20,
+        // get nextAge() {
+        // return this.age + 1
+        // },
+        // set setAge(나이) {
+        // this.age = parseInt(나이);
+        // }
+        // }
+        //
+        // // console.log(person.nextAge());
+        // // person.setAge('20');
+        // person.setAge = '20';
+        // person.nextAge;
+
+
+        class Person {
+            constructor() {
+                this.name = 'lee';
+                this.age = 20;
+            }
+            get nextAge() {
+                return this.age + 1;
+            }
+            set setAge(나이) {
+                this.age = parseInt(나이);
+            }
+        }
+
+        var person1 = new Person();
+        person1.setAge = 32;
+
+
+
+        //        1~3
+
+        class Dog {
+            constructor(type, color) {
+                this.type = type;
+                this.color = color;
+            }
+            nextAge() {
+                if (this instanceof Cat) {
+                    this.age++
+                }
+            }
+
+        }
+
+        class Cat extends Dog {
+            constructor(type, color, age) {
+                super(type, color);
+                this.age = age;
+
+            }
+
+        }
+
+        var dog1 = new Dog('말티즈', 'white');
+        var dog2 = new Dog('진돗개', 'brown');
+
+        var cat1 = new Cat('코숏', 'white', 5);
+        var cat2 = new Cat('러시안블루', 'brown', 2);
+
+
+        //        4
+        class Unit {
+            constructor() {
+                this.power = 5;
+                this.hp = 100;
+            }
+            get battlePoint() {
+                return console.log(this.power + this.hp);
+            }
+            set heal(plus) {
+                this.hp += plus;
+            }
+        }
+        var 인스턴스 = new Unit();
+
+
+        //        5
+        var data = {
+            odd: [1, 3],
+            even: [2, 4, 6, 10],
+            setter함수: function(...numbers) {
+                numbers.forEach((num) => {
+                    if (num % 2 == 0) {
+                        this.even.push(num);
+                    } else {
+                        this.odd.push(num);
+                    }
+                });
+            },
+            get getter함수() {
+
+                //  return [...this.odd, ...this.even].sort();
+
+                var a = [...this.odd, ...this.even];
+                a.sort(function(a, b) {
+                    return a - b;
+                });
+                return a;
+            }
+        };
+
+        console.log(data.getter함수);
+
+    </script>
+</body>
+
+</html>

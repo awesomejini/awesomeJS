@@ -1,0 +1,37 @@
+<script>
+    var obj = {
+        name: 'kim',
+        age: 30
+    };
+    //    Object.getOwnPropertyDescriptor(obj, 'name');
+
+    for (var key in obj) { //for of 는 obj에 못씀 (iterable X)
+        console.log(obj[key]);
+    };
+
+
+
+    class 부모 {
+
+    }
+
+    부모.prototype.name = 'Park';
+
+    var 오브젝트 = new 부모();
+
+    for (var key in 오브젝트) {
+        //        if (오브젝트.hasOwnProperty(key)) {
+        console.log(오브젝트[key]);
+        //        }
+    };
+
+
+    for (var i of 'Awesome jini') {
+        console.log(i)
+    }
+
+    var arr = [1, 2, 3, 4, 5];
+
+    arr[Symbol.iterator]();
+
+</script>

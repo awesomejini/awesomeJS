@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //        var 학생1 = {
+        // name: 'kim',
+        // age: 15,
+        // sayHi: function() {
+        // console.log('안녕하세요' + this.name + '입니다.')
+        // }
+        // };
+        //
+        // 학생1.sayHi();
+        //
+        // function Student기계(name, age) {
+        // this.name = name;
+        // this.age = age;
+        // this.sayHi = function() {
+        // console.log('안녕하세요' + this.name + '입니다.')
+        // }
+        // }
+        //
+        // var 학생2 = new Student기계('park', 18);
+        // 학생2.sayHi();
+        //        1 & 2
+
+        function Product기계(name, price) {
+            this.name = name;
+            this.price = price;
+            this.부가세 = function() {
+                return this.price * 0.1;
+            };
+        }
+
+
+
+        var product1 = new Product기계('shirts', 50000);
+        var product2 = new Product기계('pants', 60000);
+
+        console.log(product1);
+        console.log(product2);
+        console.log(product1.부가세());
+        console.log(product2.부가세());
+
+
+        //        prototype
+        // function Student기계(name) {
+        // this.name = name;
+        // this.age = 15;
+        // this.sayHi = function() {
+        // console.log('안녕하세요' + this.name + '입니다.')
+        // }
+        // }
+        //
+        // Student기계.prototype.gender = 'woman';
+        //
+        // var student1 = new Student기계('lee');
+        // var student2 = new Student기계('han');
+        //
+        // console.log(student1.gender);
+
+        //        0
+        var 학생1 = {
+            name: 'Kim',
+            age: 20
+        }
+        var 학생2 = {
+            name: 'Park',
+            age: 21
+        }
+        var 학생3 = {
+            name: 'Lee',
+            age: 22
+        }
+
+        function Student0(name, age) {
+            this.name = name;
+            this.age = age;
+            // this.sayHi = function() {
+            // console.log('안녕 나는 ' + this.name + '이야');
+            // }
+
+        }
+
+        Student0.prototype.sayHi = function() {
+            console.log('안녕 나는 ' + this.name + '이야');
+        }
+
+        var 학생1 = new Student0('Kim', 20);
+        var 학생2 = new Student0('Park', 21);
+        var 학생3 = new Student0('Lee', 22);
+
+        console.log(학생1);
+        console.log(학생2);
+        console.log(학생3);
+
+        Array.prototype.remove3 = function() {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] === 3) {
+                    this.splice(i, 1);
+                }
+            }
+        };
+
+        var l = [1, 2, 3, 4, 5];
+        l.remove3();
+        console.log(l);
+
+    </script>
+</body>
+
+</html>
